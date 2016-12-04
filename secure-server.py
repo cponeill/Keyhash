@@ -3,6 +3,7 @@
 import requests
 import json
 import os
+import dotenv
 
 from flask import Flask, request
 from two1.wallet import Wallet
@@ -16,14 +17,19 @@ wallet = Wallet()
 payment = Payment(app, wallet)
 
 # Adding key
+dotenv_file = ".env"
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
+
 key = os.environ.get('KEY')
 
-# Adding 402 decorator and charging 1500 satoshi per request
+# Adding 402 decorator and charge 1500 satoshi per request
 @app.route('/get')
 @payment.required(1500)
 def password():
 
-    password = get_data.FetchData().generate_password(key)
+    get_pwd = get_data.FetchData().generate_password(key)
+    password = get_data.FetchData().hash_password(get_pwd)
     hash = get_data.FetchData().generate_hash(password)
     params = {
         'secure-password': {
