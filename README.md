@@ -1,5 +1,5 @@
 # Keyhash
-<p> JSON output of Keyhash microservice</p>
+<p>JSON output of Keyhash microservice</p>
 <pre><code>{
     "secure-password": {
         "password": "517799e96b7150a3aa50cdfd44325bb64a7809f4",
