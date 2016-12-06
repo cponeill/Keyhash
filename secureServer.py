@@ -3,7 +3,6 @@
 import requests
 import json
 import os
-import dotenv
 
 from flask import Flask, request
 from two1.wallet import Wallet
@@ -17,10 +16,6 @@ wallet = Wallet()
 payment = Payment(app, wallet)
 
 # Adding key
-dotenv_file = ".env"
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
-
 key = os.environ.get('KEY')
 
 # Adding 402 decorator and charge 1500 satoshi per request
