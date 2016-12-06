@@ -2,9 +2,9 @@
 import os
 import unittest
 import secureServer
-from unittest import mock
-import dotenv
 import json
+
+from unittest import mock
 
 class KeyhashTestCase(unittest.TestCase):
 
