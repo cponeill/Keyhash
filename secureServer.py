@@ -23,13 +23,14 @@ key = os.environ.get('KEY')
 @payment.required(1500)
 def password():
 
-    get_pwd = get_data.FetchData().generate_password(key)
+    password = request.args.get('password')
+    get_pwd = get_data.FetchData().generate_password()
     password = get_data.FetchData().hash_password(get_pwd)
     hash = get_data.FetchData().generate_hash(password)
     params = {
         'secure-password': {
             'password': password,
-            'hash': hash,
+            'hash-sha256': hash,
         }
     }
     return json.dumps(params, indent=2)
