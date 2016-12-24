@@ -19,7 +19,7 @@ class KeyhashTestCase(unittest.TestCase):
     @mock.patch('two1.bitserv.flask.decorator.Payment.contains_payment',
                 return_value=True)
     def test_buy_success(self, *args):
-        response = self.get('/get')
+        response = self.get('/get?password="keyhash"')
         self.assertEqual(response.status_code, 200)
 
 if __name__ == '__main__':
