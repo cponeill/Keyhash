@@ -2,8 +2,8 @@
 <p>JSON output of Keyhash microservice</p>
 <pre><code>{
     "secure-password": {
-        "password": "517799e96b7150a3aa50cdfd44325bb64a7809f4",
-        "hash": "018e230018c829cfb2cc8b909a77cf5409e94d762c56df1d13d2a3473afe34e5"
+        "hash-sha256": "fd0d70ddfb39a78bce80aa9e4619690215f07f4c89f55e6b2b4ee684046e7aee",
+        "password": "37b6f9b43749e598c58ba1b485c4fea38823fe42"
     }
 }
 </code>
