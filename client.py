@@ -10,8 +10,9 @@ server_url = 'http://[::]:7987/'
 
 def get_data():
 
-    sel_url = server_url+'get'
-    response = requests.get(url=sel_url)
+    password = input()
+    sel_url = server_url+'get?password={0}'
+    response = requests.get(url=sel_url.format(password))
     print(response)
 
 if __name__ == '__main__':
