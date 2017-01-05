@@ -36,13 +36,13 @@ payment = Payment(app, wallet)
 def password():
 
     password = request.args.get('password')
-    get_pwd = get_data.FetchData().generate_password()
+    get_pwd = get_data.FetchData().generate_password	()
     password = get_data.FetchData().hash_password(get_pwd)
     hash = get_data.FetchData().generate_hash(password)
     params = {
         'secure-password': {
-            'password-hash': password,
-            'hash-sha256': hash,
+            'random-hash': password,
+            'blockchain-hash': hash,
         }
     }
     return json.dumps(params, indent=2)
