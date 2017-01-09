@@ -20,7 +20,7 @@ from two1.bitrequests import BitTransferRequests
 wallet = Wallet()
 requests = BitTransferRequests(wallet)
 
-server_url = 'http://[::]:7987/'
+server_url = 'http://[::]:9787/'
 
 def get_data():
 
