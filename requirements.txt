@@ -8,4 +8,4 @@ gunicorn==19.3.0
 python-dotenv==0.1.3
 pyyaml==3.11
 hashids==1.1.0
-two1==3.10.2
+two1==3.10.3
