@@ -40,7 +40,7 @@ def password():
     password = get_data.FetchData().hash_password(get_pwd)
     hash = get_data.FetchData().generate_hash(password)
     params = {
-        'secure-password': {
+        'keyhash': {
             'random-hash': password,
             'blockchain-hash': hash,
         }
