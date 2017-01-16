@@ -35,7 +35,7 @@ payment = Payment(app, wallet)
 @payment.required(1500)
 def password():
 
-    password = request.args.get('password')
+    password = request.args.get('hash')
     get_pwd = get_data.FetchData().generate_password	()
     password = get_data.FetchData().hash_password(get_pwd)
     hash = get_data.FetchData().generate_hash(password)
