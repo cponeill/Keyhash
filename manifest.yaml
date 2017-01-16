@@ -2,7 +2,7 @@ basePath: /
 host: '[fcce:a977:eee3:6ebf:1f21:0000:0000:0001]:9787'
 info:
   contact: {email: casey.oneill@gmail.com, name: cponeill}
-  description: Generate a secure password and password hash.
+  description: Generate a hash to identify a password or digital file.
   title: Keyhash
   x-21-app-image: https://cdn.filepicker.io/api/file/nlIgbAMGQ92hSsvjf6BQ
   x-21-category: utilities
