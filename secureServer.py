@@ -41,7 +41,7 @@ def password():
     hash = get_data.FetchData().generate_hash(password)
     params = {
         'keyhash': {
-            'random-hash': password,
+            'hash': password,
             'blockchain-hash': hash,
         }
     }
