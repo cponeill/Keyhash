@@ -34,14 +34,17 @@ payment = Payment(app, wallet)
 @app.route('/get')
 @payment.required(1500)
 def password():
-
+    """
+    Input: A file or string.
+    Output: A sha256 hash of the file or string and a hash of th sha256 hash.
+    """
     password = request.args.get('hash')
     get_pwd = get_data.FetchData().generate_password	()
     password = get_data.FetchData().hash_password(get_pwd)
     hash = get_data.FetchData().generate_hash(password)
     params = {
         'keyhash': {
-            'hash': password,
+            'sha256_hash': password,
             'blockchain-hash': hash,
         }
     }
