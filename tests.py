@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-# Adding in unittests for Keyhash microservice.
-
+# Adding in unittests in Keyhash microservice.
 import os
 import unittest
 import secureServer
