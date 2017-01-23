@@ -37,6 +37,7 @@ def password():
     """
     Input: A file or string.
     Output: A sha256 hash of the file or string and a hash of th sha256 hash.
+    params = {'keyhash':{'sha256_hash':___, 'blockchain_hash':___,}}
     """
     password = request.args.get('hash')
     get_pwd = get_data.FetchData().generate_password	()
