@@ -1,6 +1,6 @@
 # Keyhash
 <p>JSON output of Keyhash microservice</p>
-<p>Could be used to prove identity of a file or person by placing a hash on the Bitcoin Blockchain as proof.</p>
+<p>Could be used to prove identity of a file or person by placing a hash on the Bitcoin Blockchain (OP_RETURN) as proof.</p>
 <pre><code>{
     "keyhash": {
         "random-hash": "fd0d70ddfb39a78bce80aa9e4619690215f07f4c89f55e6b2b4ee684046e7aee",
