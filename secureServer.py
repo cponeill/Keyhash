@@ -1,18 +1,4 @@
-"""
-Copyright (c) 2016-2017 Blockshare Technologies, LLC.
-  ____  _            _     ____  _                      ___ ___  
- | __ )| | ___   ___| | __/ ___|| |__   __ _ _ __ ___  |_ _/ _ \ 
- |  _ \| |/ _ \ / __| |/ /\___ \| '_ \ / _` | '__/ _ \  | | | | |
- | |_) | | (_) | (__|   <  ___) | | | | (_| | | |  __/_ | | |_| |
- |____/|_|\___/ \___|_|\_\|____/|_| |_|\__,_|_|  \___(_)___\___/ 
-"""
-
-__author__ = "cponeill"
-__version__ = "0.01"
-__maintainer__ = "cponeill"
-__email__ = "cponeill@blockshare.io"
-
-#!/usr/bin/env python3
+#! /usr/bin/env python3
 
 import requests
 import json
@@ -23,6 +9,7 @@ from two1.wallet import Wallet
 from two1.bitserv.flask import Payment
 
 import fetch_data as get_data
+
 
 # Configuring app and wallet
 app = Flask(__name__)
@@ -40,7 +27,7 @@ def password():
     params = {'keyhash':{'sha256_hash':___, 'blockchain_hash':___,}}
     """
     password = request.args.get('hash')
-    get_pwd = get_data.FetchData().generate_password	()
+    get_pwd = get_data.FetchData().generate_password()
     password = get_data.FetchData().hash_password(get_pwd)
     hash = get_data.FetchData().generate_hash(password)
     params = {
