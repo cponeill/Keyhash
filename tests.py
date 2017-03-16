@@ -29,6 +29,10 @@ class KeyhashTestCase(unittest.TestCase):
         response = self.get('/get?hash="keyhash"')
         self.assertEqual(response.status_code, 200)
 
+    def test_buy_no_success(self, *args):
+        # Ensuring 402 request retrives 404 error status.
+        response = self.get('/')
+        self.assertEqual(response.status_code, 404)
 
 if __name__ == '__main__':
     unittest.main()
